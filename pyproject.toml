@@ -4,13 +4,29 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rdc-proxy-unifi"
-version = "0.1.0"
+version = "0.2.0"
 description = "UniFi/EdgeSwitch port-counter plugin for rdc-proxy."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "andrewroydshayes"}]
-dependencies = []
+keywords = ["kohler", "rdc", "unifi", "edgeswitch", "rdc-proxy", "plugin"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Networking :: Monitoring",
+]
+dependencies = [
+    "rdc-proxy>=0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrewroydshayes/rdc-proxy-unifi"
+Repository = "https://github.com/andrewroydshayes/rdc-proxy-unifi"
+Issues = "https://github.com/andrewroydshayes/rdc-proxy-unifi/issues"
 
 [project.optional-dependencies]
 dev = [
