@@ -43,7 +43,7 @@ curl -fsSL https://raw.githubusercontent.com/andrewroydshayes/rdc-proxy-unifi/ma
 Add to `/etc/rdc-proxy/rdc-proxy.env`:
 
 ```
-RDC_UNIFI_SWITCH_IP=192.168.1.97
+RDC_UNIFI_SWITCH_IP=10.0.0.97
 RDC_UNIFI_SWITCH_USER=root
 RDC_UNIFI_SSH_KEY=/etc/rdc-proxy/id_rsa_unifi
 RDC_UNIFI_PORT_ID=9

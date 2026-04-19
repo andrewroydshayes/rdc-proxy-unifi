@@ -9,7 +9,7 @@ description = "UniFi/EdgeSwitch port-counter plugin for rdc-proxy."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "Andrew Hayes"}]
+authors = [{name = "andrewroydshayes"}]
 dependencies = []
 
 [project.optional-dependencies]

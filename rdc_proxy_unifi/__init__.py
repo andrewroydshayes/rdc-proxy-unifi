@@ -8,7 +8,7 @@ back-compat with the original embedded collector).
 All configuration is via environment variables so nothing sensitive lives
 in code:
 
-  RDC_UNIFI_SWITCH_IP      Switch management IP (default 192.168.1.97)
+  RDC_UNIFI_SWITCH_IP      Switch management IP (default 10.0.0.97)
   RDC_UNIFI_SWITCH_USER    SSH user (default root)
   RDC_UNIFI_SSH_KEY        Path to SSH private key
                            (default /etc/rdc-proxy/id_rsa_unifi)

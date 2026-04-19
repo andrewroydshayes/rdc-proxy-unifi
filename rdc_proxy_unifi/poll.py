@@ -6,7 +6,7 @@ import threading
 import time
 
 
-DEFAULT_SWITCH_IP = "192.168.1.97"
+DEFAULT_SWITCH_IP = "10.0.0.97"
 DEFAULT_SWITCH_USER = "root"
 DEFAULT_SSH_KEY = "/etc/rdc-proxy/id_rsa_unifi"
 DEFAULT_PORT_ID = "9"
