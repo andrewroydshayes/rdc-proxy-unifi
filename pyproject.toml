@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rdc-proxy-unifi"
+version = "0.1.0"
+description = "UniFi/EdgeSwitch port-counter plugin for rdc-proxy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Andrew Hayes"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.entry-points."rdc_proxy.plugins"]
+unifi = "rdc_proxy_unifi:Plugin"
+
+[tool.setuptools]
+packages = ["rdc_proxy_unifi"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
