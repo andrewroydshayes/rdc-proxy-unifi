@@ -4,12 +4,11 @@
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/andrewroydshayes/rdc-proxy-unifi/main/install/install-unifi.sh \
-#     | sudo GITHUB_OWNER=<owner> bash
+#     | sudo bash
 
 set -euo pipefail
 
-GITHUB_OWNER=${GITHUB_OWNER:-andrewroydshayes}
-REPO_URL=${REPO_URL:-https://github.com/${GITHUB_OWNER}/rdc-proxy-unifi.git}
+REPO_URL=${REPO_URL:-https://github.com/andrewroydshayes/rdc-proxy-unifi.git}
 INSTALL_DIR=${INSTALL_DIR:-/opt/rdc-proxy-unifi}
 RDC_PROXY_DIR=${RDC_PROXY_DIR:-/opt/rdc-proxy}
 RDC_PROXY_CONFIG=${RDC_PROXY_CONFIG:-/etc/rdc-proxy}
