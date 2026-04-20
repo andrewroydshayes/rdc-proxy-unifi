@@ -5,6 +5,32 @@ UniFi/EdgeSwitch port-counter plugin for [rdc-proxy](https://github.com/andrewro
 Adds a "switch" side channel to the rdc-proxy dashboard containing live port
 counters polled via SSH from a UniFi/EdgeSwitch running `swctrl`.
 
+## ⚠️ Use at your own risk
+
+This is an **unofficial, community project** — not made, endorsed, or
+supported by Ubiquiti, UniFi, or Kohler/Rehlko. It runs on your hardware and
+logs into your switch over SSH using a key you supply. **You are responsible
+for your install.** The plugin is read-only (runs `swctrl port show counters`
+and parses the output), but we can't guarantee how your specific switch
+firmware will react.
+
+**Nothing leaves your Pi.** No telemetry, no analytics, no phone-home. The
+plugin's only network traffic is (a) SSH to your switch, and (b) package
+downloads from apt/PyPI the first time you install.
+
+**The source is open; read it before running it.** MIT-licensed, ~150 lines.
+If you'd rather not `curl | sudo bash`, clone the repo, read it, run it
+yourself.
+
+**No warranty.** Per the MIT license, the software is provided **"AS IS,"
+without warranty of any kind**, express or implied. The authors are not liable
+for any claim, damages, or other liability arising from use of this software.
+
+**Your relationship with your switch vendor (Ubiquiti, etc.) is yours.** SSHing
+into your switch and running `swctrl` queries is standard administrative use
+of equipment you own — but read your vendor's TOS and EULA yourself if that
+matters to you.
+
 ## Prerequisites
 
 - **rdc-proxy already installed** on the same host (it provides the plugin
@@ -70,4 +96,5 @@ pytest
 
 ## License
 
-MIT.
+[MIT](LICENSE). Provided "AS IS," without warranty. See the full disclaimer
+in the [Use at your own risk](#️-use-at-your-own-risk) section above.
