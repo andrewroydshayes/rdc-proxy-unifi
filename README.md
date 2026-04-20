@@ -26,10 +26,10 @@ yourself.
 without warranty of any kind**, express or implied. The authors are not liable
 for any claim, damages, or other liability arising from use of this software.
 
-**Your relationship with your switch vendor (Ubiquiti, etc.) is yours.** SSHing
-into your switch and running `swctrl` queries is standard administrative use
-of equipment you own — but read your vendor's TOS and EULA yourself if that
-matters to you.
+**This is normal administrative use of your switch.** SSHing into your own
+switch and running `swctrl` queries is how Ubiquiti expects admins to
+manage EdgeSwitch/UniFi gear. This plugin is just automating a read-only
+command you could type by hand.
 
 ## Prerequisites
 

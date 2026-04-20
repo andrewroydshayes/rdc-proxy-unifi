@@ -8,6 +8,24 @@
 
 set -euo pipefail
 
+# ── Disclaimer ─────────────────────────────────────────────────────────────
+if [[ "${RDC_SKIP_DISCLAIMER:-}" != "1" ]]; then
+cat <<'DISCLAIMER'
+
+  ─── rdc-proxy-unifi plugin ─────────────────────────────────────────────
+  Unofficial community project. MIT licensed "AS IS" — no warranty.
+  Read-only SSH poll of your own switch. Nothing leaves your Pi.
+  Source: https://github.com/andrewroydshayes/rdc-proxy-unifi
+  ────────────────────────────────────────────────────────────────────────
+
+DISCLAIMER
+for i in 5 4 3 2 1; do
+  printf "\r  continuing in %2ds — press Ctrl+C to abort..." "$i"
+  sleep 1
+done
+printf "\r%60s\r\n" ""
+fi
+
 REPO_URL=${REPO_URL:-https://github.com/andrewroydshayes/rdc-proxy-unifi.git}
 INSTALL_DIR=${INSTALL_DIR:-/opt/rdc-proxy-unifi}
 RDC_PROXY_DIR=${RDC_PROXY_DIR:-/opt/rdc-proxy}
